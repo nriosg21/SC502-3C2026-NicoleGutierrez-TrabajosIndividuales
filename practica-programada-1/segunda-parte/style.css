@@ -1,0 +1,783 @@
+
+:root {
+  --azul: #1769aa;
+  --azul-oscuro: #103b63;
+  --azul-profundo: #0c2944;
+  --celeste: #eaf5fc;
+  --celeste-suave: #f4f9fd;
+  --texto: #263c50;
+  --gris: #6a7d8e;
+  --blanco: #ffffff;
+  --borde: #e2ebf2;
+  --sombra: 0 14px 45px rgba(19, 63, 98, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
+  line-height: 1.7;
+}
+
+h1, h2, h3, .logo {
+  font-family: "Manrope", Arial, sans-serif;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+}
+
+.encabezado {
+  background: white;
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1280px;
+  margin: auto;
+  padding: 19px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--azul-oscuro);
+  font-size: 23px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.logo-icono {
+  display: grid;
+  place-items: center;
+  background: var(--azul);
+  color: white;
+  border-radius: 12px;
+  width: 39px;
+  height: 39px;
+  font-size: 23px;
+}
+
+.logo-acento {
+  color: var(--azul);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.menu a {
+  color: #526679;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--azul);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 25px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.25s, background 0.25s, box-shadow 0.25s;
+}
+
+.boton:hover {
+  transform: translateY(-3px);
+}
+
+.boton-nav, .boton-principal {
+  color: white;
+  background: var(--azul);
+}
+
+.boton-nav:hover, .boton-principal:hover {
+  background: var(--azul-oscuro);
+  box-shadow: 0 8px 22px rgba(23, 105, 170, 0.2);
+}
+
+/* HERO */
+
+.hero {
+  max-width: 1280px;
+  margin: auto;
+  padding: 95px 5% 105px;
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  min-height: 600px;
+}
+
+.hero-contenido {
+  flex: 1.1;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: var(--azul);
+  background: var(--celeste);
+  padding: 7px 13px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 4.2vw, 59px);
+  color: var(--azul-profundo);
+  letter-spacing: -2px;
+  margin: 23px 0;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: var(--azul);
+}
+
+.hero-contenido > p {
+  max-width: 520px;
+  font-size: 17px;
+  color: var(--gris);
+}
+
+.hero-acciones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin-top: 32px;
+}
+
+.boton-secundario {
+  color: var(--azul-oscuro);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.boton-secundario:hover {
+  color: var(--azul);
+}
+
+.hero-beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 45px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gris);
+}
+
+.beneficio-icono {
+  color: var(--azul);
+  margin-right: 6px;
+}
+
+.hero-visual {
+  flex: 0.9;
+  position: relative;
+}
+
+.hero-imagen {
+  min-height: 420px;
+  background: linear-gradient(145deg, #e5f4fd, #b5d9f0);
+  border-radius: 26px 100px 26px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 35px;
+}
+
+.hero-simbolo {
+  font-size: 125px;
+  line-height: 1;
+  color: rgba(23, 105, 170, 0.22);
+}
+
+.hero-imagen p {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--azul-oscuro);
+  margin-top: 25px;
+}
+
+.hero-imagen > span {
+  color: var(--azul);
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.tarjeta-flotante {
+  position: absolute;
+  bottom: 25px;
+  left: -35px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  padding: 17px 21px;
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+}
+
+.flotante-icono {
+  font-size: 26px;
+  color: var(--azul);
+  background: var(--celeste);
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.tarjeta-flotante strong,
+.tarjeta-flotante small {
+  display: block;
+}
+
+.tarjeta-flotante strong {
+  color: var(--azul-oscuro);
+  font-size: 13px;
+}
+
+.tarjeta-flotante small {
+  font-size: 11px;
+  color: var(--gris);
+}
+
+/* FRANJA DE BENEFICIOS */
+
+.franja-beneficios {
+  background: var(--azul-oscuro);
+  padding: 28px 8%;
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+}
+
+.franja-beneficios > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.franja-beneficios > div > span {
+  font-size: 26px;
+  color: #9ad6fb;
+}
+
+.franja-beneficios p strong,
+.franja-beneficios p small {
+  display: block;
+}
+
+.franja-beneficios strong {
+  font-size: 13px;
+}
+
+.franja-beneficios small {
+  font-size: 11px;
+  color: #b8d0e1;
+}
+
+/* SECCIONES */
+
+.seccion {
+  padding: 105px 6%;
+  scroll-margin-top: 95px;
+}
+
+.encabezado-seccion {
+  text-align: center;
+  margin: 0 auto 50px;
+  max-width: 700px;
+}
+
+.encabezado-seccion h2 {
+  color: var(--azul-profundo);
+  font-size: clamp(28px, 3vw, 39px);
+  letter-spacing: -1px;
+  margin: 18px 0 13px;
+}
+
+.encabezado-seccion p {
+  color: var(--gris);
+  font-size: 15px;
+}
+
+/* DOCTOR */
+
+.perfil {
+  background: white;
+}
+
+.tarjeta-doctor {
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.doctor-visual {
+  flex: 0 0 36%;
+  min-height: 450px;
+  background: linear-gradient(150deg, #d5ecfa, #9dcbe8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.doctor-avatar {
+  font-size: 140px;
+}
+
+.doctor-experiencia {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.doctor-experiencia strong {
+  color: var(--azul);
+  font-size: 32px;
+  font-family: "Manrope", sans-serif;
+}
+
+.doctor-experiencia span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gris);
+}
+
+.doctor-info {
+  flex: 1;
+  padding: 45px;
+}
+
+.doctor-info h3 {
+  font-size: 30px;
+  color: var(--azul-profundo);
+  margin: 17px 0 13px;
+}
+
+.doctor-descripcion {
+  color: var(--gris);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.doctor-detalles {
+  border-top: 1px solid var(--borde);
+  padding-top: 23px;
+  margin-bottom: 28px;
+  display: grid;
+  gap: 19px;
+}
+
+.detalle {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.detalle-icono {
+  width: 39px;
+  height: 39px;
+  background: var(--celeste);
+  color: var(--azul);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.detalle strong {
+  display: block;
+  font-size: 13px;
+  color: var(--azul-profundo);
+}
+
+.detalle p {
+  color: var(--gris);
+  font-size: 13px;
+}
+
+/* SERVICIOS */
+
+.servicios {
+  background: var(--celeste-suave);
+}
+
+.grid-servicios,
+.grid-testimonios {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.tarjeta-servicio {
+  position: relative;
+  background: white;
+  padding: 37px 30px;
+  border: 1px solid var(--borde);
+  border-radius: 15px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta-servicio:hover,
+.tarjeta-testimonio:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra);
+}
+
+.servicio-icono {
+  background: var(--celeste);
+  color: var(--azul);
+  width: 61px;
+  height: 61px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 29px;
+  margin-bottom: 27px;
+}
+
+.tarjeta-servicio h3 {
+  color: var(--azul-profundo);
+  font-size: 18px;
+  margin-bottom: 13px;
+}
+
+.tarjeta-servicio p {
+  color: var(--gris);
+  font-size: 13px;
+}
+
+.servicio-numero {
+  display: block;
+  color: #b5cadb;
+  font-weight: 800;
+  font-size: 12px;
+  margin-top: 28px;
+}
+
+/* TESTIMONIOS */
+
+.testimonios {
+  background: white;
+}
+
+.tarjeta-testimonio {
+  border: 1px solid var(--borde);
+  border-radius: 15px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.estrellas {
+  color: #e6a838;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.cita {
+  color: #526679;
+  font-size: 14px;
+  font-style: italic;
+  flex: 1;
+  margin-bottom: 27px;
+}
+
+.paciente {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid var(--borde);
+  padding-top: 20px;
+}
+
+.paciente-avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: var(--celeste);
+  color: var(--azul);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.paciente strong,
+.paciente small {
+  display: block;
+}
+
+.paciente strong {
+  font-size: 13px;
+  color: var(--azul-profundo);
+}
+
+.paciente small {
+  color: var(--gris);
+  font-size: 11px;
+}
+
+.nota-testimonios {
+  text-align: center;
+  color: var(--gris);
+  font-size: 11px;
+  margin-top: 25px;
+}
+
+/* CONTACTO */
+
+.contacto {
+  background: linear-gradient(125deg, #103b63, #1769aa);
+  text-align: center;
+}
+
+.contacto-contenido {
+  max-width: 700px;
+  margin: auto;
+}
+
+.etiqueta-clara {
+  background: rgba(255, 255, 255, 0.13);
+  color: #c9e8ff;
+}
+
+.contacto h2 {
+  color: white;
+  font-size: clamp(30px, 3.5vw, 43px);
+  letter-spacing: -1px;
+  margin: 22px 0;
+}
+
+.contacto p {
+  color: #c5dbea;
+  margin-bottom: 28px;
+}
+
+.boton-blanco {
+  background: white;
+  color: var(--azul-oscuro);
+}
+
+.boton-blanco:hover {
+  background: var(--celeste);
+}
+
+.contacto small {
+  display: block;
+  color: #b7d4e7;
+  margin-top: 16px;
+  font-size: 11px;
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--azul-profundo);
+  padding: 30px 6%;
+}
+
+.footer-contenido {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo-footer {
+  color: white;
+  font-size: 20px;
+}
+
+.logo-footer .logo-acento {
+  color: #a9dcff;
+}
+
+.footer p,
+.footer-contenido > span {
+  color: #a9bdce;
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    gap: 35px;
+  }
+
+  .tarjeta-flotante {
+    left: 0;
+  }
+
+  .grid-servicios,
+  .grid-testimonios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    padding: 17px 5%;
+  }
+
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 19px;
+  }
+
+  .boton-nav {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 65px 6%;
+    gap: 45px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .hero-imagen {
+    min-height: 290px;
+  }
+
+  .hero-simbolo {
+    font-size: 90px;
+  }
+
+  .franja-beneficios {
+    flex-direction: column;
+    gap: 22px;
+    padding: 30px 8%;
+  }
+
+  .seccion {
+    padding: 70px 6%;
+  }
+
+  .tarjeta-doctor {
+    flex-direction: column;
+  }
+
+  .doctor-visual {
+    flex-basis: auto;
+    min-height: 290px;
+  }
+
+  .doctor-avatar {
+    font-size: 105px;
+  }
+
+  .doctor-info {
+    padding: 30px 24px;
+  }
+
+  .doctor-info h3 {
+    font-size: 25px;
+  }
+
+  .grid-servicios,
+  .grid-testimonios {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu a {
+    font-size: 12px;
+  }
+
+  .hero-acciones {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tarjeta-flotante {
+    position: static;
+    margin-top: 15px;
+  }
+
+  .hero-imagen p {
+    font-size: 20px;
+  }
+}
