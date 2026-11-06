@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFlow | Estudiantes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <div class="logo">✦</div>
+        <div>
+            <h1>CampusFlow</h1>
+            <span>Gestión de estudiantes</span>
+        </div>
+    </div>
+    <span class="tag">Práctica Programada #3</span>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <span class="eyebrow">PANEL ACADÉMICO</span>
+        <h2>Sistema de Estudiantes</h2>
+        <p>Administrá los registros académicos desde un solo lugar.</p>
+    </section>
+
+    <section class="stats" aria-label="Estadísticas">
+        <article class="stat">
+            <span>Total de estudiantes</span>
+            <strong id="total">0</strong>
+            <small>Registros en el sistema</small>
+        </article>
+
+        <article class="stat">
+            <span>Estudiantes aprobados</span>
+            <strong id="aprobados">0</strong>
+            <small>Nota igual o superior a 70</small>
+        </article>
+
+        <article class="stat">
+            <span>Promedio general</span>
+            <strong id="promedio">0.00</strong>
+            <small>Promedio de notas</small>
+        </article>
+    </section>
+
+    <section class="panel" aria-labelledby="tituloForm">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">ADMINISTRACIÓN</span>
+                <h2 id="tituloForm">Registrar estudiante</h2>
+                <p>Completá los datos para guardar un registro.</p>
+            </div>
+        </div>
+
+        <form id="formulario" novalidate>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" type="text"
+                           placeholder="Nombre del estudiante"
+                           maxlength="100">
+                </div>
+
+                <div class="field">
+                    <label for="carrera">Carrera</label>
+                    <select id="carrera">
+                        <option value="">Seleccionar carrera</option>
+                        <option value="Ingeniería en Sistemas">
+                            Ingeniería en Sistemas
+                        </option>
+                        <option value="Ingeniería de Software">
+                            Ingeniería de Software
+                        </option>
+                        <option value="Ingeniería Industrial">
+                            Ingeniería Industrial
+                        </option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="nota">Nota final</label>
+                    <input id="nota" type="number" min="0"
+                           max="100" step="any"
+                           placeholder="0 a 100">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="guardar" class="primary">
+                    Guardar estudiante
+                </button>
+                <button type="button" id="cancelar"
+                        class="secondary" hidden>
+                    Cancelar edición
+                </button>
+            </div>
+
+            <p id="mensaje" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <section class="panel" aria-labelledby="tituloLista">
+        <div class="section-heading list-heading">
+            <div>
+                <span class="eyebrow">REGISTROS</span>
+                <h2 id="tituloLista">Estudiantes registrados</h2>
+                <p>Información obtenida desde la API.</p>
+            </div>
+            <button type="button" id="actualizar" class="secondary">
+                ↻ Actualizar
+            </button>
+        </div>
+
+        <div class="search">
+            <input id="buscar" type="search"
+                   placeholder="Buscar por nombre o carrera...">
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Carrera</th>
+                        <th>Nota</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla">
+                    <tr>
+                        <td colspan="6">Cargando estudiantes...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    CampusFlow · Ambiente Web Cliente/Servidor
+</footer>
+
+</body>
+</html>
