@@ -1,0 +1,642 @@
+
+/* BLOOM CAFÉ - DISEÑO PRINCIPAL */
+
+:root {
+    --fondo: #fcfaf6;
+    --superficie: #ffffff;
+    --crema: #f2ede5;
+    --texto: #30251e;
+    --gris: #776c63;
+    --cafe: #76533b;
+    --cafe-oscuro: #332219;
+    --borde: #e8dfd5;
+    --dorado: #c7a77f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, .logo {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1, h2, h3 {
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    margin: 12px 0 25px;
+}
+
+p {
+    color: var(--gris);
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.seccion {
+    padding: 110px 0;
+}
+
+.sobretitulo {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--cafe);
+    text-transform: uppercase;
+}
+
+/* NAVEGACIÓN */
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borde);
+}
+
+.barra {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--texto);
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--cafe);
+}
+
+.enlaces {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces a {
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.enlaces a:hover {
+    color: var(--cafe);
+}
+
+.boton-tema {
+    padding: 10px 16px;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--texto);
+    font-size: 12px;
+}
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.boton-claro {
+    background: #f3e7d5;
+    color: #332219;
+}
+
+.boton-claro:hover {
+    background: white;
+}
+
+.boton-contorno {
+    background: transparent;
+    border-color: rgba(255,255,255,0.7);
+    color: white;
+}
+
+.boton-principal {
+    background: var(--cafe);
+    color: white;
+}
+
+.boton-principal:hover {
+    background: var(--cafe-oscuro);
+}
+
+/* PORTADA */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,17,12,0.84),
+            rgba(25,17,12,0.20)
+        ),
+        url("./imagenes/cafeteria.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-interior {
+    padding: 90px 0;
+}
+
+.hero-texto {
+    max-width: 700px;
+}
+
+.hero .sobretitulo {
+    color: #e9c79d;
+}
+
+.hero h1 {
+    font-size: clamp(46px, 6vw, 82px);
+    color: white;
+    margin: 18px 0 25px;
+}
+
+.hero-descripcion {
+    color: #f1e8df;
+    font-size: 17px;
+    max-width: 530px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+#mensajeBienvenida {
+    color: #f5dfbf;
+    font-weight: bold;
+}
+
+.hero-etiqueta {
+    position: absolute;
+    bottom: 25px;
+    right: 5%;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* FRANJA */
+
+.franja {
+    background: var(--cafe-oscuro);
+    padding: 18px 0;
+}
+
+.franja .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.franja p,
+.franja span {
+    color: #f1dfc9;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* NOSOTROS */
+
+.nosotros {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.nosotros-imagen,
+.nosotros-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.nosotros-texto > p {
+    max-width: 530px;
+}
+
+.beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.beneficios li {
+    margin: 12px 0;
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.enlace-texto {
+    color: var(--cafe);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* PRODUCTOS */
+
+.seccion-menu {
+    background: var(--crema);
+}
+
+.titulo-seccion {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.productos {
+    display: flex;
+    gap: 25px;
+}
+
+.tarjeta {
+    flex: 1;
+    min-width: 0;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(30,20,10,0.12);
+}
+
+.tarjeta-imagen {
+    height: 255px;
+    overflow: hidden;
+}
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+.tarjeta-contenido {
+    padding: 27px;
+}
+
+.categoria {
+    color: var(--cafe);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tarjeta h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    min-height: 65px;
+}
+
+.tarjeta strong {
+    color: var(--cafe);
+    font-size: 22px;
+}
+
+/* CALCULADORA */
+
+.pedido-diseno {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.pedido-texto,
+.calculadora {
+    flex: 1;
+    min-width: 0;
+}
+
+.nota {
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.calculadora {
+    background: var(--superficie);
+    padding: 40px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(30,20,10,0.06);
+}
+
+.calculadora h3 {
+    font-size: 29px;
+    margin: 0 0 25px;
+}
+
+.calculadora label,
+.campo label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.calculadora input,
+.calculadora select,
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--borde);
+    background: var(--fondo);
+    color: var(--texto);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.calculadora .boton {
+    width: 100%;
+}
+
+#resultadoCalculo {
+    font-weight: bold;
+    color: var(--cafe);
+    margin-bottom: 0;
+}
+
+/* CONTACTO */
+
+.seccion-contacto {
+    background: var(--crema);
+}
+
+.contacto-diseno {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.contacto-texto,
+#formularioContacto {
+    flex: 1;
+    min-width: 0;
+}
+
+.contacto-dato {
+    margin-top: 30px;
+}
+
+.contacto-dato span {
+    color: var(--cafe);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.contacto-dato p {
+    margin-top: 5px;
+}
+
+#formularioContacto {
+    background: var(--superficie);
+    padding: 40px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+#formularioContacto h3 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+#respuestaFormulario {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #281d17;
+    padding: 55px 0;
+}
+
+.footer-interior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo-footer {
+    color: white;
+}
+
+.logo-footer span {
+    color: #d5b38a;
+}
+
+.footer p {
+    color: #d5c3b3;
+    font-size: 12px;
+}
+
+/* TEMA OSCURO */
+
+body.tema-oscuro {
+    --fondo: #211b17;
+    --superficie: #302721;
+    --crema: #29221d;
+    --texto: #f5eee7;
+    --gris: #c5b7aa;
+    --cafe: #caa783;
+    --cafe-oscuro: #1b1511;
+    --borde: #554438;
+}
+
+body.tema-oscuro .boton-principal {
+    color: #211b17;
+}
+
+body.tema-oscuro .franja {
+    background: #17110e;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .barra {
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 14px;
+    }
+
+    .enlaces {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 22px;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .seccion {
+        padding: 65px 0;
+    }
+
+    .nosotros,
+    .pedido-diseno,
+    .contacto-diseno {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .nosotros-imagen,
+    .nosotros-texto,
+    .pedido-texto,
+    .calculadora,
+    .contacto-texto,
+    #formularioContacto {
+        width: 100%;
+    }
+
+    .nosotros-imagen img {
+        height: 350px;
+    }
+
+    .productos {
+        flex-direction: column;
+    }
+
+    .tarjeta-imagen {
+        height: 300px;
+    }
+
+    .tarjeta p {
+        min-height: 0;
+    }
+
+    .footer-interior {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 41px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calculadora,
+    #formularioContacto {
+        padding: 25px;
+    }
+
+    .franja .contenedor {
+        gap: 10px;
+    }
+
+    .franja p {
+        font-size: 9px;
+    }
+}

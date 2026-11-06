@@ -1,11 +1,305 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Café | Un momento para disfrutar</title>
+    <title>Bloom Café | Café de especialidad</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado" id="inicio">
+        <div class="contenedor barra">
+            <a href="#inicio" class="logo">bloom<span>.</span></a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="enlaces">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button id="botonTema" class="boton-tema" type="button">
+                ☾ Tema oscuro
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero">
+            <div class="contenedor hero-interior">
+                <div class="hero-texto">
+                    <p class="sobretitulo">CAFÉ DE ESPECIALIDAD · HEREDIA</p>
+
+                    <h1>Los buenos días empiezan con café.</h1>
+
+                    <p class="hero-descripcion">
+                        Un rincón para bajar el ritmo, disfrutar
+                        de sabores auténticos y compartir
+                        momentos especiales.
+                    </p>
+
+                    <div class="hero-botones">
+                        <a href="#menu" class="boton boton-claro">
+                            Descubrir el menú
+                        </a>
+
+                        <button id="botonBienvenida"
+                                class="boton boton-contorno"
+                                type="button">
+                            Dame la bienvenida
+                        </button>
+                    </div>
+
+                    <p id="mensajeBienvenida" aria-live="polite"></p>
+                </div>
+            </div>
+
+            <div class="hero-etiqueta">HECHO CON AMOR ☕</div>
+        </section>
+
+        <!-- FRASE DESTACADA -->
+        <section class="franja">
+            <div class="contenedor">
+                <p>CAFÉ RECIÉN PREPARADO</p>
+                <span>✦</span>
+                <p>REPOSTERÍA ARTESANAL</p>
+                <span>✦</span>
+                <p>MOMENTOS ESPECIALES</p>
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section id="nosotros" class="seccion">
+            <div class="contenedor nosotros">
+                <div class="nosotros-imagen">
+                    <img src="./imagenes/cafeteria.jpg"
+                         alt="Café recién preparado en Bloom Café">
+                </div>
+
+                <div class="nosotros-texto">
+                    <p class="sobretitulo">NUESTRA ESENCIA</p>
+                    <h2>Mucho más que una taza de café.</h2>
+
+                    <p>
+                        En Bloom Café creemos que las cosas
+                        sencillas son las que hacen especiales
+                        nuestros días.
+                    </p>
+
+                    <p>
+                        Somos una cafetería ficticia creada para
+                        compartir nuestra pasión por el café,
+                        la repostería artesanal y los espacios
+                        que se sienten como casa.
+                    </p>
+
+                    <ul class="beneficios">
+                        <li>✓ Café preparado con dedicación</li>
+                        <li>✓ Productos frescos y artesanales</li>
+                        <li>✓ Un ambiente cálido y acogedor</li>
+                    </ul>
+
+                    <a href="#contacto" class="enlace-texto">
+                        Conocé más sobre nosotros →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENÚ -->
+        <section id="menu" class="seccion seccion-menu">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <p class="sobretitulo">HECHO PARA DISFRUTAR</p>
+                    <h2>Pequeños placeres, grandes momentos.</h2>
+                    <p>Descubrí algunos de nuestros favoritos.</p>
+                </div>
+
+                <div class="productos">
+
+                    <article class="tarjeta">
+                        <div class="tarjeta-imagen">
+                            <img src="./imagenes/cappuccino.jpg"
+                                 alt="Cappuccino con espuma de leche">
+                        </div>
+                        <div class="tarjeta-contenido">
+                            <span class="categoria">CAFÉ CLÁSICO</span>
+                            <h3>Cappuccino</h3>
+                            <p>
+                                Espresso intenso con leche
+                                cremosa y espuma suave.
+                            </p>
+                            <strong>₡2.200</strong>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <div class="tarjeta-imagen">
+                            <img src="./imagenes/latte.jpg"
+                                 alt="Latte cremoso de vainilla">
+                        </div>
+                        <div class="tarjeta-contenido">
+                            <span class="categoria">NUESTRO FAVORITO</span>
+                            <h3>Latte de vainilla</h3>
+                            <p>
+                                Una mezcla delicada de espresso,
+                                leche y vainilla.
+                            </p>
+                            <strong>₡2.500</strong>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <div class="tarjeta-imagen">
+                            <img src="./imagenes/croissant.jpg"
+                                 alt="Croissant artesanal dorado">
+                        </div>
+                        <div class="tarjeta-contenido">
+                            <span class="categoria">REPOSTERÍA</span>
+                            <h3>Croissant artesanal</h3>
+                            <p>
+                                Horneado hasta alcanzar una
+                                textura dorada y crujiente.
+                            </p>
+                            <strong>₡1.800</strong>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULADORA -->
+        <section id="pedido" class="seccion">
+            <div class="contenedor pedido-diseno">
+                <div class="pedido-texto">
+                    <p class="sobretitulo">TU MOMENTO BLOOM</p>
+                    <h2>Armá tu pedido favorito.</h2>
+                    <p>
+                        Seleccioná un producto y la cantidad
+                        que querés. Calcularemos el total
+                        de tu pedido al instante.
+                    </p>
+                    <p class="nota">
+                        * Simulación de compra para fines académicos.
+                    </p>
+                </div>
+
+                <div class="calculadora">
+                    <h3>Calculá tu pedido</h3>
+
+                    <label for="productoSeleccionado">
+                        Producto
+                    </label>
+                    <select id="productoSeleccionado">
+                        <option value="2200">
+                            Cappuccino — ₡2.200
+                        </option>
+                        <option value="2500">
+                            Latte de vainilla — ₡2.500
+                        </option>
+                        <option value="1800">
+                            Croissant — ₡1.800
+                        </option>
+                    </select>
+
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad"
+                           min="1" step="1" value="1">
+
+                    <button id="botonCalcular"
+                            class="boton boton-principal"
+                            type="button">
+                        Calcular total →
+                    </button>
+
+                    <p id="resultadoCalculo" aria-live="polite">
+                        Tu total aparecerá aquí.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="seccion seccion-contacto">
+            <div class="contenedor contacto-diseno">
+                <div class="contacto-texto">
+                    <p class="sobretitulo">ESTAMOS PARA VOS</p>
+                    <h2>Siempre hay tiempo para un buen café.</h2>
+                    <p>
+                        ¿Tenés una pregunta o querés dejarnos
+                        un mensaje? Nos encantará leerte.
+                    </p>
+
+                    <div class="contacto-dato">
+                        <span>UBICACIÓN</span>
+                        <p>Heredia, Costa Rica</p>
+                    </div>
+
+                    <div class="contacto-dato">
+                        <span>HORARIO FICTICIO</span>
+                        <p>Lunes a sábado · 8:00 a. m. – 7:00 p. m.</p>
+                    </div>
+                </div>
+
+                <form id="formularioContacto" novalidate>
+                    <h3>Envianos un mensaje</h3>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre"
+                               name="nombre"
+                               placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo"
+                               name="correo"
+                               placeholder="nombre@correo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje"
+                                  rows="4"
+                                  placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="boton boton-principal">
+                        Enviar mensaje →
+                    </button>
+
+                    <p id="respuestaFormulario"
+                       aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="contenedor footer-interior">
+            <div>
+                <a href="#inicio" class="logo logo-footer">
+                    bloom<span>.</span>
+                </a>
+                <p>Un momento para disfrutar.</p>
+            </div>
+
+            <p>© 2026 Bloom Café · Proyecto académico</p>
+        </div>
+    </footer>
 
 </body>
 </html>
