@@ -14,8 +14,10 @@
 
 <body>
 
+  <!-- MENÚ DE NAVEGACIÓN -->
   <header class="encabezado">
     <nav class="navbar" aria-label="Navegación principal">
+
       <a href="#inicio" class="logo">
         <span class="logo-icono">✚</span>
         <span>Clínica<span class="logo-acento">Vida</span></span>
@@ -24,22 +26,32 @@
       <ul class="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#perfil">Nuestro especialista</a></li>
+        <li><a href="#perfil">Perfil del Doctor</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
-      <a href="#contacto" class="boton boton-nav">Agendar cita</a>
+      <a href="#contacto" class="boton boton-nav">
+        Agendar cita
+      </a>
+
     </nav>
   </header>
 
   <main>
 
-    <!-- INICIO -->
+    <!-- SECCIÓN DE INICIO -->
     <section id="inicio" class="hero">
-      <div class="hero-contenido">
-        <span class="etiqueta">ATENCIÓN MÉDICA DE CONFIANZA</span>
 
-        <h1>Tu salud merece <span>la mejor atención.</span></h1>
+      <div class="hero-contenido">
+
+        <span class="etiqueta">
+          ATENCIÓN MÉDICA DE CONFIANZA
+        </span>
+
+        <h1>
+          Tu salud merece
+          <span>la mejor atención.</span>
+        </h1>
 
         <p>
           Cuidamos de vos y de quienes más querés.
@@ -48,196 +60,414 @@
         </p>
 
         <div class="hero-acciones">
-          <a href="#contacto" class="boton boton-principal">Agendar una cita <span aria-hidden="true">→</span></a>
-          <a href="#perfil" class="boton-secundario">Conocer al doctor <span aria-hidden="true">↗</span></a>
+
+          <a href="#contacto" class="boton boton-principal">
+            Agendar una cita
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a href="#perfil" class="boton-secundario">
+            Conocer al doctor
+            <span aria-hidden="true">↗</span>
+          </a>
+
         </div>
 
         <div class="hero-beneficios">
-          <div><span class="beneficio-icono">✓</span> Atención personalizada</div>
-          <div><span class="beneficio-icono">✓</span> Profesionales calificados</div>
+
+          <div>
+            <span class="beneficio-icono">✓</span>
+            Atención personalizada
+          </div>
+
+          <div>
+            <span class="beneficio-icono">✓</span>
+            Profesionales calificados
+          </div>
+
         </div>
       </div>
 
       <div class="hero-visual">
+
         <div class="hero-imagen">
           <div class="hero-simbolo" aria-hidden="true">✚</div>
+
           <p>Tu bienestar comienza aquí</p>
+
           <span>Medicina con vocación humana</span>
         </div>
 
         <div class="tarjeta-flotante">
+
           <span class="flotante-icono">♡</span>
+
           <div>
             <strong>Atención integral</strong>
             <small>Tu salud es nuestra prioridad</small>
           </div>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- BENEFICIOS -->
     <section class="franja-beneficios" aria-label="Nuestros valores">
+
       <div>
         <span>✚</span>
-        <p><strong>Atención humana</strong><small>Siempre cerca de vos</small></p>
+        <p>
+          <strong>Atención humana</strong>
+          <small>Siempre cerca de vos</small>
+        </p>
       </div>
+
       <div>
         <span>◈</span>
-        <p><strong>Experiencia médica</strong><small>Profesionales comprometidos</small></p>
+        <p>
+          <strong>Experiencia médica</strong>
+          <small>Profesionales comprometidos</small>
+        </p>
       </div>
+
       <div>
         <span>♡</span>
-        <p><strong>Bienestar integral</strong><small>Cuidamos cada detalle</small></p>
+        <p>
+          <strong>Bienestar integral</strong>
+          <small>Cuidamos cada detalle</small>
+        </p>
       </div>
+
     </section>
 
     <!-- PERFIL DEL DOCTOR -->
     <section id="perfil" class="seccion perfil">
+
       <div class="encabezado-seccion">
-        <span class="etiqueta">CONOCÉ A TU ESPECIALISTA</span>
+
+        <span class="etiqueta">
+          CONOCÉ A TU ESPECIALISTA
+        </span>
+
         <h2>Profesionales que cuidan de vos</h2>
-        <p>Experiencia, vocación y un trato cercano en cada consulta.</p>
+
+        <p>
+          Experiencia, vocación y un trato cercano
+          en cada consulta.
+        </p>
+
       </div>
 
       <article class="tarjeta-doctor">
+
         <div class="doctor-visual">
-          <div class="doctor-avatar" aria-label="Representación ilustrativa de un médico">👨‍⚕️</div>
+
+          <div class="doctor-avatar"
+               aria-label="Representación ilustrativa de un médico">
+            👨‍⚕️
+          </div>
+
           <div class="doctor-experiencia">
             <strong>10+</strong>
             <span>Años de experiencia</span>
           </div>
+
         </div>
 
         <div class="doctor-info">
+
           <span class="etiqueta">MEDICINA GENERAL</span>
+
           <h3>Dr. Alejandro Rodríguez</h3>
-          <p class="doctor-descripcion">
+
+          <!-- DESCRIPCIÓN CON ID -->
+          <p id="descripcion-doctor" class="doctor-descripcion">
             Médico comprometido con brindar una atención integral,
             preventiva y personalizada, poniendo siempre el bienestar
             del paciente en primer lugar.
           </p>
 
           <div class="doctor-detalles">
+
             <div class="detalle">
+
               <span class="detalle-icono">✚</span>
+
               <div>
                 <strong>Especialidad</strong>
                 <p>Medicina General</p>
               </div>
+
             </div>
 
             <div class="detalle">
+
               <span class="detalle-icono">◷</span>
+
               <div>
                 <strong>Experiencia</strong>
                 <p>10 años de trayectoria profesional</p>
               </div>
+
             </div>
 
             <div class="detalle">
+
               <span class="detalle-icono">▤</span>
+
               <div>
                 <strong>Formación académica</strong>
                 <p>Licenciatura en Medicina y Cirugía</p>
               </div>
+
             </div>
+
           </div>
 
-          <a href="#contacto" class="boton boton-principal">Agendar una consulta <span aria-hidden="true">→</span></a>
+          <a href="#contacto" class="boton boton-principal">
+            Agendar una consulta
+            <span aria-hidden="true">→</span>
+          </a>
+
         </div>
+
       </article>
+
     </section>
 
     <!-- SERVICIOS -->
     <section id="servicios" class="seccion servicios">
+
       <div class="encabezado-seccion">
+
         <span class="etiqueta">NUESTROS SERVICIOS</span>
+
         <h2>Cuidamos tu salud en cada etapa</h2>
-        <p>Servicios médicos enfocados en tu bienestar y tranquilidad.</p>
+
+        <p>
+          Servicios médicos enfocados en tu bienestar
+          y tranquilidad.
+        </p>
+
       </div>
 
       <div class="grid-servicios">
+
         <article class="tarjeta-servicio">
+
           <div class="servicio-icono">✚</div>
+
           <h3>Consulta médica general</h3>
-          <p>Valoración médica integral, diagnóstico y orientación profesional según tus necesidades.</p>
+
+          <p>
+            Valoración médica integral, diagnóstico y
+            orientación profesional según tus necesidades.
+          </p>
+
           <span class="servicio-numero">01</span>
+
         </article>
 
         <article class="tarjeta-servicio">
+
           <div class="servicio-icono">♡</div>
+
           <h3>Medicina preventiva</h3>
-          <p>Promovemos hábitos saludables y la detección temprana de posibles condiciones médicas.</p>
+
+          <p>
+            Promovemos hábitos saludables y la detección
+            temprana de posibles condiciones médicas.
+          </p>
+
           <span class="servicio-numero">02</span>
+
         </article>
 
         <article class="tarjeta-servicio">
+
           <div class="servicio-icono">▤</div>
+
           <h3>Seguimiento médico</h3>
-          <p>Acompañamiento continuo y control de tu salud con un enfoque cercano y personalizado.</p>
+
+          <p>
+            Acompañamiento continuo y control de tu salud
+            con un enfoque cercano y personalizado.
+          </p>
+
           <span class="servicio-numero">03</span>
+
         </article>
+
       </div>
+
     </section>
 
-    <!-- OPINIONES -->
+    <!-- OPINIONES DE PACIENTES -->
     <section class="seccion testimonios">
+
       <div class="encabezado-seccion">
-        <span class="etiqueta">EXPERIENCIAS DE PACIENTES</span>
+
+        <span class="etiqueta">
+          EXPERIENCIAS DE PACIENTES
+        </span>
+
         <h2>La confianza se construye con cuidado</h2>
-        <p>Ejemplos de experiencias positivas de atención médica.</p>
+
+        <p>
+          Ejemplos de experiencias positivas
+          de atención médica.
+        </p>
+
       </div>
 
+      <!-- CONTENEDOR FLEXBOX -->
       <div class="grid-testimonios">
+
+        <!-- OPINIÓN 1 -->
         <article class="tarjeta-testimonio">
-          <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="cita">“Excelente atención y profesionalismo. Me sentí muy cómoda durante toda la consulta.”</p>
+
+          <div class="estrellas" aria-label="5 de 5 estrellas">
+            ★★★★★
+          </div>
+
+          <p class="cita">
+            “Excelente atención y profesionalismo.
+            Me sentí muy cómoda durante toda la consulta.”
+          </p>
+
           <div class="paciente">
+
             <span class="paciente-avatar">MG</span>
-            <div><strong>María González</strong><small>Paciente</small></div>
+
+            <div>
+              <strong>María González</strong>
+              <small>Paciente</small>
+              <small>Fecha de consulta: 15/09/2026</small>
+            </div>
+
           </div>
+
         </article>
 
+        <!-- OPINIÓN 2 -->
         <article class="tarjeta-testimonio">
-          <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="cita">“Un doctor muy atento y amable. Explica todo con claridad y transmite mucha confianza.”</p>
+
+          <div class="estrellas" aria-label="5 de 5 estrellas">
+            ★★★★★
+          </div>
+
+          <p class="cita">
+            “Un doctor muy atento y amable.
+            Explica todo con claridad y transmite
+            mucha confianza.”
+          </p>
+
           <div class="paciente">
+
             <span class="paciente-avatar">CR</span>
-            <div><strong>Carlos Ramírez</strong><small>Paciente</small></div>
+
+            <div>
+              <strong>Carlos Ramírez</strong>
+              <small>Paciente</small>
+              <small>Fecha de consulta: 22/09/2026</small>
+            </div>
+
           </div>
+
         </article>
 
+        <!-- OPINIÓN 3 -->
         <article class="tarjeta-testimonio">
-          <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="cita">“Muy buena experiencia durante mi consulta. Recibí una atención cálida y profesional.”</p>
-          <div class="paciente">
-            <span class="paciente-avatar">LF</span>
-            <div><strong>Laura Fernández</strong><small>Paciente</small></div>
+
+          <div class="estrellas" aria-label="5 de 5 estrellas">
+            ★★★★★
           </div>
+
+          <p class="cita">
+            “Muy buena experiencia durante mi consulta.
+            Recibí una atención cálida y profesional.”
+          </p>
+
+          <div class="paciente">
+
+            <span class="paciente-avatar">LF</span>
+
+            <div>
+              <strong>Laura Fernández</strong>
+              <small>Paciente</small>
+              <small>Fecha de consulta: 03/10/2026</small>
+            </div>
+
+          </div>
+
         </article>
+
       </div>
-      <p class="nota-testimonios">* Testimonios ficticios utilizados con fines académicos.</p>
+
+      <p class="nota-testimonios">
+        * Testimonios y fechas ficticios utilizados
+        con fines académicos.
+      </p>
+
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="seccion contacto">
+
       <div class="contacto-contenido">
-        <span class="etiqueta etiqueta-clara">ESTAMOS PARA VOS</span>
-        <h2>Tu bienestar comienza con una buena decisión.</h2>
-        <p>Estamos aquí para acompañarte. Contactanos para conocer más sobre nuestros servicios médicos.</p>
-        <a href="mailto:contacto@clinicavida.example" class="boton boton-blanco">Solicitar información <span aria-hidden="true">→</span></a>
-        <small>Correo demostrativo para fines académicos.</small>
+
+        <span class="etiqueta etiqueta-clara">
+          ESTAMOS PARA VOS
+        </span>
+
+        <h2>
+          Tu bienestar comienza con una buena decisión.
+        </h2>
+
+        <p>
+          Estamos aquí para acompañarte.
+          Contactanos para conocer más sobre nuestros
+          servicios médicos.
+        </p>
+
+        <a href="mailto:contacto@clinicavida.example"
+           class="boton boton-blanco">
+          Solicitar información
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <small>
+          Correo demostrativo para fines académicos.
+        </small>
+
       </div>
+
     </section>
 
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer class="footer">
+
     <div class="footer-contenido">
-      <a href="#inicio" class="logo logo-footer"><span class="logo-icono">✚</span><span>Clínica<span class="logo-acento">Vida</span></span></a>
+
+      <a href="#inicio" class="logo logo-footer">
+        <span class="logo-icono">✚</span>
+        <span>
+          Clínica<span class="logo-acento">Vida</span>
+        </span>
+      </a>
+
       <p>Medicina con vocación humana.</p>
-      <span>© 2026 Clínica Vida. Proyecto académico.</span>
+
+      <span>
+        © 2026 Clínica Vida. Proyecto académico.
+      </span>
+
     </div>
+
   </footer>
 
 </body>

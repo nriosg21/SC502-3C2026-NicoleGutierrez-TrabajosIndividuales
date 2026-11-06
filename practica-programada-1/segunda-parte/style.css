@@ -1,4 +1,6 @@
 
+/* VARIABLES DE COLOR */
+
 :root {
   --azul: #1769aa;
   --azul-oscuro: #103b63;
@@ -11,6 +13,8 @@
   --borde: #e2ebf2;
   --sombra: 0 14px 45px rgba(19, 63, 98, 0.08);
 }
+
+/* ESTILOS GENERALES */
 
 * {
   margin: 0;
@@ -37,6 +41,8 @@ h1, h2, h3, .logo {
 a {
   text-decoration: none;
 }
+
+/* ENCABEZADO */
 
 .encabezado {
   background: white;
@@ -99,6 +105,8 @@ a {
   color: var(--azul);
 }
 
+/* BOTONES */
+
 .boton {
   display: inline-flex;
   align-items: center;
@@ -108,24 +116,28 @@ a {
   border-radius: 9px;
   font-weight: 700;
   font-size: 14px;
-  transition: transform 0.25s, background 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s,
+              background 0.25s,
+              box-shadow 0.25s;
 }
 
 .boton:hover {
   transform: translateY(-3px);
 }
 
-.boton-nav, .boton-principal {
+.boton-nav,
+.boton-principal {
   color: white;
   background: var(--azul);
 }
 
-.boton-nav:hover, .boton-principal:hover {
+.boton-nav:hover,
+.boton-principal:hover {
   background: var(--azul-oscuro);
   box-shadow: 0 8px 22px rgba(23, 105, 170, 0.2);
 }
 
-/* HERO */
+/* INICIO */
 
 .hero {
   max-width: 1280px;
@@ -203,6 +215,8 @@ a {
   margin-right: 6px;
 }
 
+/* ELEMENTOS VISUALES */
+
 .hero-visual {
   flex: 0.9;
   position: relative;
@@ -279,7 +293,7 @@ a {
   color: var(--gris);
 }
 
-/* FRANJA DE BENEFICIOS */
+/* BENEFICIOS */
 
 .franja-beneficios {
   background: var(--azul-oscuro);
@@ -340,7 +354,7 @@ a {
   font-size: 15px;
 }
 
-/* DOCTOR */
+/* PERFIL DEL DOCTOR */
 
 .perfil {
   background: white;
@@ -408,7 +422,9 @@ a {
   margin: 17px 0 13px;
 }
 
-.doctor-descripcion {
+/* DESCRIPCIÓN CON ID Y CLASE */
+
+#descripcion-doctor {
   color: var(--gris);
   font-size: 14px;
   margin-bottom: 24px;
@@ -457,8 +473,7 @@ a {
   background: var(--celeste-suave);
 }
 
-.grid-servicios,
-.grid-testimonios {
+.grid-servicios {
   max-width: 1100px;
   margin: auto;
   display: grid;
@@ -472,7 +487,8 @@ a {
   padding: 37px 30px;
   border: 1px solid var(--borde);
   border-radius: 15px;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s,
+              box-shadow 0.25s;
 }
 
 .tarjeta-servicio:hover,
@@ -512,19 +528,31 @@ a {
   margin-top: 28px;
 }
 
-/* TESTIMONIOS */
+/* OPINIONES CON FLEXBOX */
 
 .testimonios {
   background: white;
 }
 
+.grid-testimonios {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+
 .tarjeta-testimonio {
+  flex: 1 1 280px;
+  min-width: 0;
   border: 1px solid var(--borde);
   border-radius: 15px;
   padding: 32px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s,
+              box-shadow 0.25s;
 }
 
 .estrellas {
@@ -559,6 +587,7 @@ a {
   border-radius: 50%;
   font-size: 12px;
   font-weight: 800;
+  flex-shrink: 0;
 }
 
 .paciente strong,
@@ -628,7 +657,7 @@ a {
   font-size: 11px;
 }
 
-/* FOOTER */
+/* PIE DE PÁGINA */
 
 .footer {
   background: var(--azul-profundo);
@@ -660,9 +689,10 @@ a {
   font-size: 12px;
 }
 
-/* RESPONSIVE */
+/* DISEÑO RESPONSIVE PARA TABLETS */
 
 @media (max-width: 950px) {
+
   .navbar {
     flex-wrap: wrap;
     justify-content: center;
@@ -676,13 +706,15 @@ a {
     left: 0;
   }
 
-  .grid-servicios,
-  .grid-testimonios {
+  .grid-servicios {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* DISEÑO RESPONSIVE PARA CELULARES */
+
 @media (max-width: 700px) {
+
   .navbar {
     flex-direction: column;
     padding: 17px 5%;
@@ -751,9 +783,17 @@ a {
     font-size: 25px;
   }
 
-  .grid-servicios,
-  .grid-testimonios {
+  .grid-servicios {
     grid-template-columns: 1fr;
+  }
+
+  .grid-testimonios {
+    flex-direction: column;
+  }
+
+  .tarjeta-testimonio {
+    flex: 1 1 auto;
+    width: 100%;
   }
 
   .footer-contenido {
@@ -762,7 +802,10 @@ a {
   }
 }
 
+/* PANTALLAS PEQUEÑAS */
+
 @media (max-width: 400px) {
+
   .menu a {
     font-size: 12px;
   }
