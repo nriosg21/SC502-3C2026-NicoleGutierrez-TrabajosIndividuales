@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFlow | Control Académico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="marca">
+        <span class="logo">✦</span>
+        <div>
+            <h1>CampusFlow</h1>
+            <p>Control académico · Semana 7</p>
+        </div>
+    </div>
+    <span class="etiqueta">Sistema de estudiantes</span>
+</header>
+
+<main class="contenedor">
+
+    <section class="bienvenida" aria-labelledby="titulo">
+        <span class="subtitulo">GESTIÓN ACADÉMICA</span>
+        <h2 id="titulo">Registro de estudiantes</h2>
+        <p>
+            Administrá los registros académicos, consultá las
+            calificaciones y visualizá los resultados en tiempo real.
+        </p>
+    </section>
+
+    <section class="estadisticas" aria-label="Indicadores académicos">
+        <article class="tarjeta-estadistica">
+            <span>Estudiantes registrados</span>
+            <strong id="totalEstudiantes">3</strong>
+            <small>Total de registros</small>
+        </article>
+
+        <article class="tarjeta-estadistica">
+            <span>Promedio general</span>
+            <strong id="promedioIndicador">76.0</strong>
+            <small>Promedio de calificaciones</small>
+        </article>
+
+        <article class="tarjeta-estadistica">
+            <span>Nota más alta</span>
+            <strong id="maximaIndicador">90</strong>
+            <small>Mejor calificación</small>
+        </article>
+    </section>
+
+    <section class="panel" aria-labelledby="tituloRegistro">
+        <div class="panel-encabezado">
+            <div>
+                <span class="subtitulo">NUEVO REGISTRO</span>
+                <h2 id="tituloRegistro">Agregar estudiante</h2>
+                <p>Completá todos los campos para registrar un estudiante.</p>
+            </div>
+        </div>
+
+        <form id="formEstudiante" novalidate>
+            <div class="campos">
+                <div class="campo">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Ej. María" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos *</label>
+                    <input type="text" id="apellidos" name="apellidos"
+                           placeholder="Ej. Mora Pérez" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nota">Nota *</label>
+                    <input type="number" id="nota" name="nota"
+                           min="0" max="100" step="any"
+                           placeholder="0 a 100" required>
+                </div>
+            </div>
+
+            <p id="mensajeError" class="mensaje-error"
+               role="alert" hidden></p>
+
+            <p id="mensajeExito" class="mensaje-exito"
+               role="status" hidden></p>
+
+            <button type="submit" id="btnAgregar">
+                + Agregar estudiante
+            </button>
+        </form>
+    </section>
+
+    <section class="panel" aria-labelledby="tituloTabla">
+        <div class="panel-encabezado">
+            <div>
+                <span class="subtitulo">LISTADO ACADÉMICO</span>
+                <h2 id="tituloTabla">Estudiantes registrados</h2>
+                <p>Listado actualizado automáticamente.</p>
+            </div>
+        </div>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Nota</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEstudiantes"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="panel" aria-labelledby="tituloResumen">
+        <div class="panel-encabezado">
+            <div>
+                <span class="subtitulo">ANÁLISIS DE RESULTADOS</span>
+                <h2 id="tituloResumen">Resumen de notas</h2>
+                <p>Estadísticas calculadas automáticamente.</p>
+            </div>
+        </div>
+
+        <div class="resumen-grid">
+            <article class="resumen-item">
+                <span>Estudiante con mayor nota</span>
+                <strong id="mejorEstudiante">—</strong>
+            </article>
+
+            <article class="resumen-item">
+                <span>Promedio de todas las notas</span>
+                <strong id="promedioNotas">—</strong>
+            </article>
+
+            <article class="resumen-item">
+                <span>Nota más baja</span>
+                <strong id="notaMinima">—</strong>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pie-pagina">
+    <p>CampusFlow · Estudio de Caso · Ambiente Web Cliente/Servidor</p>
+</footer>
+
+</body>
+</html>
